@@ -1,0 +1,16 @@
+input[type='text']{
+    opacity: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    font-size: 0;
+    position: absolute;
+}
+
+form{
+    background-color: blueviolet!important;
+}
+
+h1{
+    font-style: italic;
+}
