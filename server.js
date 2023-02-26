@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
+app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.get("/", function(req, res){
@@ -9,12 +10,23 @@ app.get("/", function(req, res){
 })
 
 app.post("/", function(req, res){
+    const { add , sub, div, mul, modulo, square } = req.body;
     const num1 = Number(req.body.num1)
     const num2 = Number(req.body.num2)
+    let result = 0
 
-    const result = num1 + num2
+    if(add === "+"){
+        result = num1 + num2
+    }else if(sub === "-"){
+        result = num1 - num2
+    }else if(div === "/"){
+        result = num1 / num2
+    }else if(mul === "*"){
+        result = num1 * num2
+    }
 
-    res.send("Result is " + result)
+    res.write("<h1> Result is "+ `${result}` +"</h1>");
+    res.send()
 })
 
 app.get("/bmicalculator", function(req, res){

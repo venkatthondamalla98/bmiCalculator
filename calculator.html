@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/calculator.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Calculator</title>
 </head>
 <body>
-    <h1>Calculator</h1>
     <form action="/" method="post">
+        <h1>Calculator</h1>
         <input type="text" name="num1" placeholder="Number"/><br/>
         <input type="text" name="num2" placeholder="Number"/><br/>
-        <button type="submit">Calculate</button>
+        <button type="submit" name="add" value = "+">Addition</button>
+        <button type="submit" name="sub" value = "-">subtraction</button><br/>
+        <button type="submit" name="div" value = "/">Division</button>
+        <button type="submit" name="mul" value = "*">Multiplication</button>
     </form>
 </body>
 </html>
